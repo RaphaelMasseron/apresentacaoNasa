@@ -5,8 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0B1724">
-  <meta name="description" content="Documentação técnica acessível do CTRLClima - NASA Space Apps Challenge 2026.">
-  <title>CTRLClima | Documentação Técnica</title>
+  <meta name="description" content="Pitch de 5 minutos do CTRLClima: problema, solução, dados NASA, metodologia, acessibilidade e limites científicos.">
+  <title>CTRLClima | Pitch de 5 minutos</title>
 
   <link rel="icon" type="image/png" href="./img/mundo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -50,11 +50,13 @@
 
     <nav id="nav" class="nav" aria-label="Navegação principal">
       <a href="#missao" data-i18n="navMission">Missão</a>
+      <a href="#problema-solucao">Problema e solução</a>
       <a href="#recursos" data-i18n="navFeatures">Recursos</a>
       <a href="#fontes" data-i18n="navSources">Fontes NASA</a>
       <a href="#metodo" data-i18n="navMethod">Metodologia</a>
       <a href="#arquitetura" data-i18n="navTech">Tecnologia</a>
       <a href="#equipe" data-i18n="navTeam">Equipe</a>
+      <a href="#roteiro-pitch">Pitch de 5 min</a>
     </nav>
 
     <!-- IDIOMAS -->
@@ -282,7 +284,7 @@
     >
       <div class="hero-copy reveal">
         <span class="eyebrow" data-i18n="heroOverline">
-          VULCANODEV / DOCUMENTAÇÃO TÉCNICA
+          VULCANODEV / PITCH DE 5 MINUTOS
         </span>
 
         <h1 id="heroTitle" data-i18n-html="heroTitle">
@@ -296,7 +298,7 @@
 
         <div class="actions">
           <a href="#missao" class="btn primary" data-i18n="explore">
-            EXPLORAR DOCUMENTAÇÃO ↗
+            CONHECER A PROPOSTA ↗
           </a>
 
           <a href="#fontes" class="btn secondary" data-i18n="sourcesBtn">
@@ -377,6 +379,59 @@
             <span data-i18n="statLanguages">Idiomas disponíveis</span>
           </div>
         </div>
+      </div>
+    </section>
+
+
+    <!-- IDENTIFICAÇÃO DO PROBLEMA E SOLUÇÃO -->
+    <section
+      id="problema-solucao"
+      class="section page-section"
+      aria-labelledby="problemSolutionTitle"
+    >
+      <div class="container">
+        <span class="kicker">01A — IDENTIFICAÇÃO DO PROBLEMA E SOLUÇÃO</span>
+        <h2 id="problemSolutionTitle">
+          MUITOS DADOS.<br>
+          <em>POUCA COMPREENSÃO.</em>
+        </h2>
+        <div class="cards two">
+          <article class="reveal">
+            <h3>O PROBLEMA</h3>
+            <p>
+              Dados ambientais de satélites e modelos são valiosos, mas podem
+              ser difíceis de localizar, comparar e interpretar. Uma curva de
+              temperatura não explica, sozinha, se existe uma tendência
+              estatisticamente sustentada. Além disso, temperatura do ar e
+              temperatura da superfície terrestre são grandezas diferentes,
+              frequentemente confundidas.
+            </p>
+            <p>
+              Isso dificulta a compreensão de mudanças ambientais por
+              estudantes, educadores e pessoas sem formação especializada.
+            </p>
+          </article>
+          <article class="reveal">
+            <h3>A SOLUÇÃO CTRLCLIMA</h3>
+            <p>
+              O CTRLClima propõe uma jornada de investigação: selecionar uma
+              variável e uma região, visualizar uma série histórica e examinar
+              sua taxa de mudança com indicação do método, da fonte e das
+              limitações da análise.
+            </p>
+            <p>
+              O escopo científico prioriza NASA Giovanni para séries
+              temporais e NASA AppEEARS para observações geoespaciais, como
+              temperatura da superfície MODIS. O contexto de saúde é
+              educativo e não constitui diagnóstico nem prova de causalidade.
+            </p>
+          </article>
+        </div>
+        <p class="notice">
+          Estado de verificação: a integração completa com observações reais
+          NASA e os resultados científicos finais precisam ser confirmados
+          na aplicação antes de serem apresentados como concluídos.
+        </p>
       </div>
     </section>
 
@@ -567,6 +622,66 @@
       </div>
     </section>
 
+
+    <!-- ROTEIRO DE APRESENTAÇÃO: 5 MINUTOS -->
+    <section id="roteiro-pitch" class="section page-section" aria-labelledby="pitchTitle">
+      <div class="container">
+        <span class="kicker">09 — ROTEIRO PARA ENSAIO</span>
+        <h2 id="pitchTitle">PITCH DE <em>5 MINUTOS.</em></h2>
+        <p class="big">
+          Roteiro de fala organizado em dez etapas, totalizando 300 segundos.
+          Os tempos são estimativas para ensaio, não limites confirmados do evento.
+        </p>
+        <ol class="timeline">
+          <li>
+            <strong>00:00–00:20 — Abertura</strong>
+            <p>Boa tarde. Somos a equipe VulcanoDev e apresentamos o CTRLClima, uma proposta para o desafio Earth System Trend Detective, do NASA Space Apps Challenge 2026. Nossa pergunta é simples: como transformar medições do planeta em informações que as pessoas realmente consigam compreender?</p>
+          </li>
+          <li>
+            <strong>00:20–01:05 — Problema e solução</strong>
+            <p>A NASA disponibiliza informações ambientais muito importantes, mas encontrar uma série histórica, entender suas unidades e interpretar suas mudanças nem sempre é simples. Um exemplo é a confusão entre temperatura do ar e temperatura da superfície terrestre. Elas estão relacionadas, mas não medem a mesma coisa. Outro problema é olhar para um gráfico e afirmar que existe uma tendência sem verificar os dados e o método. O CTRLClima busca enfrentar essas dificuldades reunindo visualização, explicação e rastreabilidade em uma jornada acessível: escolher, investigar e compreender. Nossa proposta não é substituir a ciência, mas aproximar as pessoas de suas evidências.</p>
+          </li>
+          <li>
+            <strong>01:05–01:35 — Missão e público</strong>
+            <p>Queremos apoiar estudantes, professores, pesquisadores iniciantes e pessoas interessadas em mudanças ambientais. O objetivo é permitir que cada usuário faça perguntas sobre uma região e um período, em vez de receber apenas números isolados. Uma boa investigação precisa mostrar também o que os dados não permitem concluir.</p>
+          </li>
+          <li>
+            <strong>01:35–02:20 — Funcionalidades e demonstração</strong>
+            <p>Na experiência planejada, o usuário seleciona uma variável ambiental e uma região. Em seguida, acompanha sua evolução em uma série temporal, identifica períodos de aumento ou redução e consulta informações sobre a fonte. O passo seguinte é avaliar a taxa de mudança e, quando os pressupostos permitirem, a significância estatística. Durante a demonstração, devemos mostrar apenas as telas e os cálculos que estiverem funcionando. Funcionalidades ainda não integradas serão apresentadas como etapas em desenvolvimento, não como resultados prontos.</p>
+          </li>
+          <li>
+            <strong>02:20–03:00 — Fontes NASA</strong>
+            <p>Escolhemos dois recursos ligados ao desafio. O NASA Giovanni apoia a exploração de séries ambientais. O NASA AppEEARS permite acessar produtos geoespaciais, incluindo dados MODIS de temperatura da superfície. Cada conjunto exige atenção à unidade, ao período, à cobertura espacial e aos indicadores de qualidade. A seleção desses recursos é parte do método; a utilização efetiva de cada produto deve ser demonstrada por arquivos e metadados verificáveis.</p>
+          </li>
+          <li>
+            <strong>03:00–03:40 — Método científico</strong>
+            <p>A metodologia começa pela escolha da variável, da área e do intervalo temporal. Depois vêm a verificação de valores ausentes, a agregação adequada e a visualização da série. Para tendências, a regressão linear pode estimar uma taxa de mudança. Testes como Mann-Kendall exigem verificar seus pressupostos e a influência de autocorrelação. Não basta obter um valor-p para afirmar uma descoberta. O CTRLClima deve comunicar incertezas, limitações e diferenças entre observação, análise e projeção.</p>
+          </li>
+          <li>
+            <strong>03:40–04:05 — Arquitetura</strong>
+            <p>A arquitetura proposta combina React e Vite na interface, gráficos com Recharts e serviços em NestJS e TypeScript. Essa separação ajuda a manter o processamento científico no backend e a apresentação acessível no frontend. A confiabilidade, porém, depende da integração e dos testes de ponta a ponta, que precisam ser documentados.</p>
+          </li>
+          <li>
+            <strong>04:05–04:30 — Acessibilidade e saúde</strong>
+            <p>O CTRLClima também considera leitura por voz, contraste, ajustes de texto, navegação por teclado e idiomas. No tema de saúde, explicamos riscos conhecidos do calor extremo com apoio de referências científicas. Uma tendência ambiental não demonstra, por si só, que determinada doença foi causada por ela; por isso evitamos conclusões médicas indevidas.</p>
+          </li>
+          <li>
+            <strong>04:30–04:45 — Validação e limites</strong>
+            <p>Nosso compromisso é diferenciar funcionalidades implementadas, análises em validação e ideias futuras. Resultados com dados reais só devem aparecer depois de verificados. Fontes, unidades e limitações precisam acompanhar cada gráfico.</p>
+          </li>
+          <li>
+            <strong>04:45–05:00 — Equipe e encerramento</strong>
+            <p>Somos a VulcanoDev. Com o CTRLClima, queremos transformar dados em perguntas melhores e evidências em conhecimento acessível. Convidamos vocês a conhecer a proposta e acompanhar sua validação científica.</p>
+          </li>
+        </ol>
+        <p class="notice">
+          Antes da apresentação: substitua qualquer descrição de recurso
+          planejado por uma demonstração real somente após validar o
+          funcionamento. O roteiro não afirma que a integração NASA está concluída.
+        </p>
+      </div>
+    </section>
+
     <!-- EQUIPE -->
     <section
       id="equipe"
@@ -655,3 +770,4 @@
   </script>
 </body>
 </html>
+
