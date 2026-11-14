@@ -1,0 +1,587 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0B1724">
+  <meta name="description" content="Documentação técnica acessível do CTRLClima - NASA Space Apps Challenge 2026.">
+  <title>CTRLClima | Documentação Técnica</title>
+
+  <link rel="icon" type="image/png" href="./img/mundo.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./css/style.css">
+
+  <script src="./js/config.js" defer></script>
+  <script src="./js/script.js" defer></script>
+</head>
+
+<body>
+  <a href="#main" class="skip" data-i18n="skip">
+    Pular para o conteúdo principal
+  </a>
+
+  <div class="stars" aria-hidden="true"></div>
+  <div id="progress" class="progress" aria-hidden="true"></div>
+
+  <!-- CABEÇALHO -->
+  <header class="header">
+    <a href="#inicio" class="brand" aria-label="CTRLClima - Início">
+      <span class="brand-text">
+        <strong>CTRL<span>CLIMA</span></strong>
+        <small>NASA SPACE APPS CHALLENGE 2026</small>
+      </span>
+    </a>
+
+    <button
+      id="menuButton"
+      class="menu-button"
+      type="button"
+      aria-label="Abrir menu"
+      aria-expanded="false"
+      aria-controls="nav"
+    >☰</button>
+
+    <nav id="nav" class="nav" aria-label="Navegação principal">
+      <a href="#missao" data-i18n="navMission">Missão</a>
+      <a href="#recursos" data-i18n="navFeatures">Recursos</a>
+      <a href="#fontes" data-i18n="navSources">Fontes NASA</a>
+      <a href="#metodo" data-i18n="navMethod">Metodologia</a>
+      <a href="#arquitetura" data-i18n="navTech">Tecnologia</a>
+      <a href="#equipe" data-i18n="navTeam">Equipe</a>
+    </nav>
+
+    <!-- IDIOMAS VISÍVEIS -->
+    <div class="header-language">
+      <label for="language" class="sr-only" data-i18n="language">
+        Selecionar idioma
+      </label>
+
+      <select id="language" data-i18n-aria="language">
+        <option value="pt">🇧🇷 Português</option>
+        <option value="en">🇺🇸 English</option>
+        <option value="es">🇪🇸 Español</option>
+      </select>
+    </div>
+  </header>
+
+  <!-- PAINEL DE ACESSIBILIDADE -->
+  <aside
+    id="accessPanel"
+    class="access-panel"
+    aria-labelledby="accessTitle"
+    hidden
+  >
+    <div class="panel-top">
+      <div>
+        <span class="access-eyebrow">CTRLCLIMA / ACCESSIBILITY</span>
+
+        <h2 id="accessTitle" data-i18n="access">
+          Acessibilidade
+        </h2>
+
+        <p class="access-description" data-i18n="accessDescription">
+          Personalize sua experiência de navegação.
+        </p>
+      </div>
+
+      <button
+        id="closeAccess"
+        class="icon-button"
+        type="button"
+        aria-label="Fechar"
+        data-i18n-aria="close"
+      >✕</button>
+    </div>
+
+    <!-- APARÊNCIA -->
+    <section class="access-group" aria-labelledby="visualTitle">
+      <h3 id="visualTitle" class="access-group-title">
+        <span aria-hidden="true">◉</span>
+        <span data-i18n="visualGroup">Aparência e visualização</span>
+      </h3>
+
+      <div class="access-grid">
+        <button id="contrast" type="button" aria-pressed="false">
+          <span class="access-option-icon" aria-hidden="true">◐</span>
+          <span data-i18n="contrast">Alto contraste</span>
+        </button>
+
+        <button id="largeText" type="button" aria-pressed="false">
+          <span class="access-option-icon" aria-hidden="true">A+</span>
+          <span data-i18n="largeText">Texto maior</span>
+        </button>
+
+        <button id="grayscale" type="button" aria-pressed="false">
+          <span class="access-option-icon" aria-hidden="true">◑</span>
+          <span data-i18n="grayscale">Escala de cinza</span>
+        </button>
+
+        <button id="readingFont" type="button" aria-pressed="false">
+          <span class="access-option-icon" aria-hidden="true">Aa</span>
+          <span data-i18n="readingFont">Fonte simples</span>
+        </button>
+
+        <button id="spacing" type="button" aria-pressed="false">
+          <span class="access-option-icon" aria-hidden="true">↔</span>
+          <span data-i18n="spacing">Mais espaçamento</span>
+        </button>
+
+        <button id="lineSpacing" type="button" aria-pressed="false">
+          <span class="access-option-icon" aria-hidden="true">☷</span>
+          <span data-i18n="lineSpacing">Altura das linhas</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- NAVEGAÇÃO -->
+    <section class="access-group" aria-labelledby="navigationTitle">
+      <h3 id="navigationTitle" class="access-group-title">
+        <span aria-hidden="true">⌘</span>
+        <span data-i18n="navigationGroup">Navegação e leitura</span>
+      </h3>
+
+      <div class="access-grid">
+        <button id="focusMode" type="button" aria-pressed="false">
+          <span class="access-option-icon" aria-hidden="true">◎</span>
+          <span data-i18n="focusMode">Destacar foco</span>
+        </button>
+
+        <button id="underlineLinks" type="button" aria-pressed="false">
+          <span class="access-option-icon" aria-hidden="true">↗</span>
+          <span data-i18n="underlineLinks">Destacar links</span>
+        </button>
+
+        <button id="readingGuide" type="button" aria-pressed="false">
+          <span class="access-option-icon" aria-hidden="true">▰</span>
+          <span data-i18n="readingGuide">Guia de leitura</span>
+        </button>
+
+        <button id="reduceMotion" type="button" aria-pressed="false">
+          <span class="access-option-icon" aria-hidden="true">Ⅱ</span>
+          <span data-i18n="reduceMotion">Reduzir animações</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- LEITURA POR VOZ -->
+    <section class="access-group" aria-labelledby="voiceTitle">
+      <h3 id="voiceTitle" class="access-group-title">
+        <span aria-hidden="true">♫</span>
+        <span data-i18n="voiceGroup">Assistente de leitura</span>
+      </h3>
+
+      <button
+        id="voiceToggle"
+        class="voice-main-button"
+        type="button"
+        aria-controls="voiceTools"
+        aria-expanded="false"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <rect x="9" y="2" width="6" height="12" rx="3"></rect>
+          <path d="M5 10a7 7 0 0 0 14 0"></path>
+          <path d="M12 17v5"></path>
+          <path d="M8 22h8"></path>
+        </svg>
+
+        <span class="voice-button-text">
+          <strong data-i18n="voiceButton">Leitura por voz</strong>
+          <small data-i18n="voiceHint">Ouça o conteúdo da página</small>
+        </span>
+
+        <span class="voice-chevron" aria-hidden="true">⌄</span>
+      </button>
+
+      <div id="voiceTools" class="voice-tools" hidden>
+        <div class="voice-actions">
+          <button id="readSection" type="button" data-i18n="readSection">
+            Ler seção atual
+          </button>
+          <button id="readAll" type="button" data-i18n="readAll">
+            Ler todo o conteúdo
+          </button>
+          <button id="pauseVoice" type="button" data-i18n="pause">
+            Pausar
+          </button>
+          <button id="resumeVoice" type="button" data-i18n="resume">
+            Continuar
+          </button>
+          <button id="stopVoice" type="button" data-i18n="stop">
+            Parar
+          </button>
+        </div>
+
+        <label for="voiceRate" data-i18n="speed">
+          Velocidade da voz
+        </label>
+
+        <div class="voice-speed">
+          <input
+            id="voiceRate"
+            type="range"
+            min="0.7"
+            max="1.5"
+            step="0.1"
+            value="1"
+          >
+          <output id="rateValue" for="voiceRate">1.0×</output>
+        </div>
+      </div>
+    </section>
+
+    <div class="access-footer">
+      <p class="panel-help" data-i18n="help">
+        Use Tab e Enter para navegar. Alt+1 abre a acessibilidade,
+        Alt+2 inicia a leitura e Alt+3 interrompe.
+      </p>
+
+      <p
+        id="speechStatus"
+        class="speech-status"
+        role="status"
+        aria-live="polite"
+      ></p>
+
+      <button id="reset" class="reset" type="button">
+        <span aria-hidden="true">↺</span>
+        <span data-i18n="reset">Restaurar preferências</span>
+      </button>
+    </div>
+  </aside>
+
+  <div
+    id="readingGuideLine"
+    class="reading-guide-line"
+    aria-hidden="true"
+  ></div>
+
+  <!-- CONTEÚDO -->
+  <main id="main" tabindex="-1">
+
+    <section id="inicio" class="hero page-section" aria-labelledby="heroTitle">
+      <div class="hero-copy reveal">
+        <span class="eyebrow" data-i18n="heroOverline">
+          VULCANODEV / DOCUMENTAÇÃO TÉCNICA
+        </span>
+
+        <h1 id="heroTitle" data-i18n-html="heroTitle">
+          A TERRA<br>CONTA <em>HISTÓRIAS.</em>
+        </h1>
+
+        <p class="lead" data-i18n="heroText">
+          O CTRLClima transforma a investigação de tendências ambientais
+          em uma experiência visual, científica e acessível.
+        </p>
+
+        <div class="actions">
+          <a href="#missao" class="btn primary" data-i18n="explore">
+            EXPLORAR DOCUMENTAÇÃO ↗
+          </a>
+
+          <a href="#fontes" class="btn secondary" data-i18n="sourcesBtn">
+            FONTES CIENTÍFICAS ↓
+          </a>
+        </div>
+
+        <span class="eyebrow foot">
+          EARTH SYSTEM TREND DETECTIVE · 2026
+        </span>
+      </div>
+
+      <!-- LOGOTIPO ANIMADO -->
+      <div class="earth-wrap">
+        <div class="earth-orbit" aria-hidden="true"></div>
+        <img
+          src="./img/logotipo.gif"
+          class="earth-image"
+          alt="Logotipo animado do CTRLClima"
+          fetchpriority="high"
+        >
+      </div>
+    </section>
+
+    <!-- MISSÃO -->
+    <section id="missao" class="section panel-dark page-section" aria-labelledby="missionTitle">
+      <div class="container">
+        <span class="kicker" data-i18n="missionKicker">
+          01 — NOSSA MISSÃO
+        </span>
+
+        <div class="split">
+          <h2 id="missionTitle" class="reveal" data-i18n-html="missionTitle">
+            ENTENDER O PLANETA.<br>
+            <em>ALÉM DOS NÚMEROS.</em>
+          </h2>
+
+          <div class="reveal">
+            <p class="big" data-i18n="missionLead">
+              Investigar como temperatura, precipitação e temperatura
+              da superfície terrestre variam no tempo e no espaço.
+            </p>
+
+            <p data-i18n="missionText">
+              O CTRLClima busca tornar as séries temporais compreensíveis,
+              com fontes rastreáveis, tendências exploratórias e indicação
+              clara das limitações.
+            </p>
+          </div>
+        </div>
+
+        <div class="stats">
+          <div class="reveal">
+            <b>03</b>
+            <span data-i18n="statVariables">Variáveis ambientais</span>
+          </div>
+
+          <div class="reveal">
+            <b>02</b>
+            <span data-i18n="statSources">Fontes NASA selecionadas</span>
+          </div>
+
+          <div class="reveal">
+            <b>05</b>
+            <span data-i18n="statYears">Anos de projeção ilustrativa</span>
+          </div>
+
+          <div class="reveal">
+            <b>03</b>
+            <span data-i18n="statLanguages">Idiomas disponíveis</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FUNCIONALIDADES -->
+    <section id="recursos" class="section page-section" aria-labelledby="featuresTitle">
+      <div class="container">
+        <span class="kicker" data-i18n="featuresKicker">
+          02 — FUNCIONALIDADES
+        </span>
+
+        <h2 id="featuresTitle" data-i18n-html="featuresTitle">
+          DA OBSERVAÇÃO<br>
+          <em>À INTERPRETAÇÃO.</em>
+        </h2>
+
+        <div id="featuresCards" class="cards three"></div>
+      </div>
+    </section>
+
+    <!-- FONTES NASA -->
+    <section id="fontes" class="section panel-dark page-section" aria-labelledby="sourcesTitle">
+      <div class="container">
+        <span class="kicker" data-i18n="sourcesKicker">
+          03 — FONTES CIENTÍFICAS
+        </span>
+
+        <h2 id="sourcesTitle" data-i18n-html="sourcesTitle">
+          CIÊNCIA COM<br>
+          <em>ORIGEM RASTREÁVEL.</em>
+        </h2>
+
+        <div id="sourcesCards" class="cards two"></div>
+
+        <p class="notice" data-i18n="lstNote">
+          A temperatura da superfície terrestre não equivale
+          à temperatura do ar.
+        </p>
+      </div>
+    </section>
+
+    <!-- METODOLOGIA -->
+    <section id="metodo" class="section page-section" aria-labelledby="methodTitle">
+      <div class="container">
+        <span class="kicker" data-i18n="methodKicker">
+          04 — METODOLOGIA
+        </span>
+
+        <h2 id="methodTitle" data-i18n-html="methodTitle">
+          DOS DADOS<br>
+          <em>À EVIDÊNCIA.</em>
+        </h2>
+
+        <ol id="methodSteps" class="timeline"></ol>
+
+        <p class="notice" data-i18n="methodNote">
+          A regressão linear e a projeção de cinco anos são exploratórias.
+          Mann-Kendall e inclinação de Sen não foram implementados.
+        </p>
+      </div>
+    </section>
+
+    <!-- ARQUITETURA -->
+    <section id="arquitetura" class="section panel-dark page-section" aria-labelledby="techTitle">
+      <div class="container">
+        <span class="kicker" data-i18n="techKicker">
+          05 — ARQUITETURA TÉCNICA
+        </span>
+
+        <h2 id="techTitle" data-i18n-html="techTitle">
+          TECNOLOGIA A SERVIÇO<br>
+          <em>DA CIÊNCIA.</em>
+        </h2>
+
+        <div class="arch reveal">
+          <div>
+            <small data-i18n="archSources">FONTES</small>
+            <strong>Giovanni / AppEEARS</strong>
+          </div>
+
+          <span aria-hidden="true">→</span>
+
+          <div>
+            <small>API</small>
+            <strong>NestJS + TypeScript</strong>
+          </div>
+
+          <span aria-hidden="true">→</span>
+
+          <div>
+            <small data-i18n="archInterface">INTERFACE</small>
+            <strong>React + Vite + Recharts</strong>
+          </div>
+        </div>
+
+        <p class="tech-note" data-i18n="techNote">
+          O fluxo não utiliza banco de dados, ORM, Prisma ou MariaDB.
+        </p>
+      </div>
+    </section>
+
+    <!-- ACESSIBILIDADE E SAÚDE -->
+    <section id="acessibilidade" class="section page-section" aria-labelledby="inclusiveTitle">
+      <div class="container">
+        <span class="kicker" data-i18n="inclusiveKicker">
+          06 — ACESSIBILIDADE E SAÚDE
+        </span>
+
+        <h2 id="inclusiveTitle" data-i18n-html="inclusiveTitle">
+          CONHECIMENTO<br>
+          <em>PARA MAIS PESSOAS.</em>
+        </h2>
+
+        <div id="inclusiveCards" class="cards two"></div>
+      </div>
+    </section>
+
+    <!-- VALIDAÇÃO -->
+    <section id="validacao" class="section panel-dark page-section" aria-labelledby="verifyTitle">
+      <div class="container">
+        <span class="kicker" data-i18n="verifyKicker">
+          07 — VERIFICAÇÃO E RESPONSABILIDADE
+        </span>
+
+        <h2 id="verifyTitle" data-i18n-html="verifyTitle">
+          TRANSPARÊNCIA<br>
+          <em>EM CADA ETAPA.</em>
+        </h2>
+
+        <div id="verifyCards" class="cards two"></div>
+
+        <div class="references">
+          <h3 data-i18n="references">REFERÊNCIAS</h3>
+
+          <a href="https://www.spaceappschallenge.org/2026/challenges/earth-system-trend-detective/" target="_blank" rel="noopener noreferrer">NASA Space Apps ↗</a>
+          <a href="https://giovanni.gsfc.nasa.gov/" target="_blank" rel="noopener noreferrer">NASA Giovanni ↗</a>
+          <a href="https://appeears.earthdatacloud.nasa.gov/" target="_blank" rel="noopener noreferrer">NASA AppEEARS ↗</a>
+          <a href="https://lpdaac.usgs.gov/products/mod11a2v061/" target="_blank" rel="noopener noreferrer">MODIS MOD11A2.061 ↗</a>
+          <a href="https://www.who.int/news-room/fact-sheets/detail/climate-change-heat-and-health" target="_blank" rel="noopener noreferrer">WHO / OMS ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- EQUIPE -->
+    <section id="equipe" class="section team page-section" aria-labelledby="teamTitle">
+      <div class="container">
+        <span class="kicker" data-i18n="teamKicker">
+          08 — NOSSA EQUIPE
+        </span>
+
+        <h2 id="teamTitle">VULCANO<em>DEV.</em></h2>
+
+        <p data-i18n="teamText">
+          Equipe responsável pela pesquisa, desenvolvimento,
+          revisão científica e validação do CTRLClima.
+        </p>
+
+        <div class="members">
+          <span>LETICIA ALVES LIMA</span>
+          <span>RAPHAEL SENNA MASSERON</span>
+          <span>SIMONE CRISTINA NUNES</span>
+        </div>
+
+        <p>OURO PRETO — MG / 2026</p>
+
+        <div class="team-actions">
+          <a
+            id="openProject"
+            class="btn project-button"
+            href="http://localhost:5173/"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-i18n="openProject"
+          >
+            ACESSAR O CTRLCLIMA ↗
+          </a>
+
+          <a href="#inicio" class="btn secondary" data-i18n="backTop">
+            VOLTAR AO INÍCIO ↑
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="siteFooter" class="footer">
+    <span>© 2026 VULCANODEV — CTRLCLIMA</span>
+    <span data-i18n="independent">
+      Projeto independente da equipe VulcanoDev
+    </span>
+  </footer>
+
+  <!-- VLibras OFICIAL -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+
+  <!-- BOTÃO FLUTUANTE -->
+  <button
+    id="accessButton"
+    class="access-floating"
+    type="button"
+    aria-controls="accessPanel"
+    aria-expanded="false"
+  >
+    <span aria-hidden="true">♿</span>
+    <span data-i18n="access">Acessibilidade</span>
+  </button>
+
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    window.addEventListener("load", function () {
+      if (window.VLibras) {
+        new window.VLibras.Widget("https://vlibras.gov.br/app");
+      }
+    });
+  </script>
+</body>
+</html>
