@@ -9,15 +9,17 @@
   <title>CTRLClima | Documentação Técnica</title>
 
   <link rel="icon" type="image/png" href="./img/mundo.png">
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="./css/style.css">
 
-  <script src="./js/config.js" defer></script>
-  <script src="./js/script.js" defer></script>
+  <!-- Scripts processados e incluídos no build do Vite -->
+  <script type="module">
+    import "./js/config.js";
+    import "./js/script.js";
+  </script>
 </head>
 
 <body>
@@ -55,7 +57,7 @@
       <a href="#equipe" data-i18n="navTeam">Equipe</a>
     </nav>
 
-    <!-- IDIOMAS VISÍVEIS -->
+    <!-- IDIOMAS -->
     <div class="header-language">
       <label for="language" class="sr-only" data-i18n="language">
         Selecionar idioma
@@ -79,11 +81,9 @@
     <div class="panel-top">
       <div>
         <span class="access-eyebrow">CTRLCLIMA / ACCESSIBILITY</span>
-
         <h2 id="accessTitle" data-i18n="access">
           Acessibilidade
         </h2>
-
         <p class="access-description" data-i18n="accessDescription">
           Personalize sua experiência de navegação.
         </p>
@@ -274,7 +274,12 @@
   <!-- CONTEÚDO -->
   <main id="main" tabindex="-1">
 
-    <section id="inicio" class="hero page-section" aria-labelledby="heroTitle">
+    <!-- INÍCIO -->
+    <section
+      id="inicio"
+      class="hero page-section"
+      aria-labelledby="heroTitle"
+    >
       <div class="hero-copy reveal">
         <span class="eyebrow" data-i18n="heroOverline">
           VULCANODEV / DOCUMENTAÇÃO TÉCNICA
@@ -317,14 +322,22 @@
     </section>
 
     <!-- MISSÃO -->
-    <section id="missao" class="section panel-dark page-section" aria-labelledby="missionTitle">
+    <section
+      id="missao"
+      class="section panel-dark page-section"
+      aria-labelledby="missionTitle"
+    >
       <div class="container">
         <span class="kicker" data-i18n="missionKicker">
           01 — NOSSA MISSÃO
         </span>
 
         <div class="split">
-          <h2 id="missionTitle" class="reveal" data-i18n-html="missionTitle">
+          <h2
+            id="missionTitle"
+            class="reveal"
+            data-i18n-html="missionTitle"
+          >
             ENTENDER O PLANETA.<br>
             <em>ALÉM DOS NÚMEROS.</em>
           </h2>
@@ -368,7 +381,11 @@
     </section>
 
     <!-- FUNCIONALIDADES -->
-    <section id="recursos" class="section page-section" aria-labelledby="featuresTitle">
+    <section
+      id="recursos"
+      class="section page-section"
+      aria-labelledby="featuresTitle"
+    >
       <div class="container">
         <span class="kicker" data-i18n="featuresKicker">
           02 — FUNCIONALIDADES
@@ -384,7 +401,11 @@
     </section>
 
     <!-- FONTES NASA -->
-    <section id="fontes" class="section panel-dark page-section" aria-labelledby="sourcesTitle">
+    <section
+      id="fontes"
+      class="section panel-dark page-section"
+      aria-labelledby="sourcesTitle"
+    >
       <div class="container">
         <span class="kicker" data-i18n="sourcesKicker">
           03 — FONTES CIENTÍFICAS
@@ -405,7 +426,11 @@
     </section>
 
     <!-- METODOLOGIA -->
-    <section id="metodo" class="section page-section" aria-labelledby="methodTitle">
+    <section
+      id="metodo"
+      class="section page-section"
+      aria-labelledby="methodTitle"
+    >
       <div class="container">
         <span class="kicker" data-i18n="methodKicker">
           04 — METODOLOGIA
@@ -426,7 +451,11 @@
     </section>
 
     <!-- ARQUITETURA -->
-    <section id="arquitetura" class="section panel-dark page-section" aria-labelledby="techTitle">
+    <section
+      id="arquitetura"
+      class="section panel-dark page-section"
+      aria-labelledby="techTitle"
+    >
       <div class="container">
         <span class="kicker" data-i18n="techKicker">
           05 — ARQUITETURA TÉCNICA
@@ -465,7 +494,11 @@
     </section>
 
     <!-- ACESSIBILIDADE E SAÚDE -->
-    <section id="acessibilidade" class="section page-section" aria-labelledby="inclusiveTitle">
+    <section
+      id="acessibilidade"
+      class="section page-section"
+      aria-labelledby="inclusiveTitle"
+    >
       <div class="container">
         <span class="kicker" data-i18n="inclusiveKicker">
           06 — ACESSIBILIDADE E SAÚDE
@@ -481,7 +514,11 @@
     </section>
 
     <!-- VALIDAÇÃO -->
-    <section id="validacao" class="section panel-dark page-section" aria-labelledby="verifyTitle">
+    <section
+      id="validacao"
+      class="section panel-dark page-section"
+      aria-labelledby="verifyTitle"
+    >
       <div class="container">
         <span class="kicker" data-i18n="verifyKicker">
           07 — VERIFICAÇÃO E RESPONSABILIDADE
@@ -497,17 +534,45 @@
         <div class="references">
           <h3 data-i18n="references">REFERÊNCIAS</h3>
 
-          <a href="https://www.spaceappschallenge.org/2026/challenges/earth-system-trend-detective/" target="_blank" rel="noopener noreferrer">NASA Space Apps ↗</a>
-          <a href="https://giovanni.gsfc.nasa.gov/" target="_blank" rel="noopener noreferrer">NASA Giovanni ↗</a>
-          <a href="https://appeears.earthdatacloud.nasa.gov/" target="_blank" rel="noopener noreferrer">NASA AppEEARS ↗</a>
-          <a href="https://lpdaac.usgs.gov/products/mod11a2v061/" target="_blank" rel="noopener noreferrer">MODIS MOD11A2.061 ↗</a>
-          <a href="https://www.who.int/news-room/fact-sheets/detail/climate-change-heat-and-health" target="_blank" rel="noopener noreferrer">WHO / OMS ↗</a>
+          <a
+            href="https://www.spaceappschallenge.org/2026/challenges/earth-system-trend-detective/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >NASA Space Apps ↗</a>
+
+          <a
+            href="https://giovanni.gsfc.nasa.gov/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >NASA Giovanni ↗</a>
+
+          <a
+            href="https://appeears.earthdatacloud.nasa.gov/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >NASA AppEEARS ↗</a>
+
+          <a
+            href="https://lpdaac.usgs.gov/products/mod11a2v061/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >MODIS MOD11A2.061 ↗</a>
+
+          <a
+            href="https://www.who.int/news-room/fact-sheets/detail/climate-change-heat-and-health"
+            target="_blank"
+            rel="noopener noreferrer"
+          >WHO / OMS ↗</a>
         </div>
       </div>
     </section>
 
     <!-- EQUIPE -->
-    <section id="equipe" class="section team page-section" aria-labelledby="teamTitle">
+    <section
+      id="equipe"
+      class="section team page-section"
+      aria-labelledby="teamTitle"
+    >
       <div class="container">
         <span class="kicker" data-i18n="teamKicker">
           08 — NOSSA EQUIPE
@@ -540,7 +605,11 @@
             ACESSAR O CTRLCLIMA ↗
           </a>
 
-          <a href="#inicio" class="btn secondary" data-i18n="backTop">
+          <a
+            href="#inicio"
+            class="btn secondary"
+            data-i18n="backTop"
+          >
             VOLTAR AO INÍCIO ↑
           </a>
         </div>
@@ -548,6 +617,7 @@
     </section>
   </main>
 
+  <!-- RODAPÉ -->
   <footer id="siteFooter" class="footer">
     <span>© 2026 VULCANODEV — CTRLCLIMA</span>
     <span data-i18n="independent">
@@ -555,7 +625,7 @@
     </span>
   </footer>
 
-  <!-- VLibras OFICIAL -->
+  <!-- VLIBRAS -->
   <div vw class="enabled">
     <div vw-access-button class="active"></div>
     <div vw-plugin-wrapper>
